@@ -1,6 +1,6 @@
 import { readFile } from './../../utils/file.utils';
 
-export async function run() {
+export async function part1() {
   console.log('Start program day 1');
 
   const result = await readFile('./src/2020/day1/input.txt');
@@ -25,7 +25,7 @@ export async function run() {
   });
 }
 
-export async function runPart2() {
+export async function part2() {
   console.log('Start program day 1');
 
   const result = await readFile('./src/2020/day1/input.txt');
