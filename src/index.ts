@@ -2,6 +2,7 @@ import readline from 'readline';
 import * as day1 from './2020/day1';
 import * as day2 from './2020/day2';
 import * as day3 from './2020/day3';
+import * as day4 from './2020/day4';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -40,6 +41,18 @@ rl.question('Day ? ', async (dayNumber: string) => {
         rl.close();
       } else {
         await day3.part2();
+        rl.close();
+      }
+    });
+  }
+
+  if (dayNumber === '4') {
+    rl.question('Part ? ', async (part: string) => {
+      if (part === '1') {
+        await day4.part1();
+        rl.close();
+      } else {
+        await day4.part2();
         rl.close();
       }
     });

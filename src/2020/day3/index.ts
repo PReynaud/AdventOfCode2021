@@ -83,30 +83,30 @@ export function displayPosition(map: string[], position: Position): void {
   }
   clonedMap[position.y] = currentLineChars.join('');
 
-  console.log(clonedMap.join('\n'))
+  console.log(clonedMap.join('\n'));
 }
 
 export function getFinalResult(map: string[], movement: Movement): number {
   let currentPosition: Position = {
     x: 0,
-    y: 0
+    y: 0,
   };
   let result = 0;
 
-  let isBeyondLimit = false
+  let isBeyondLimit = false;
   while (!isBeyondLimit) {
     // displayPosition(map, currentPosition);
-    
+
     currentPosition = getNextPosition(map, currentPosition, movement);
-    isBeyondLimit = isBeyondBottomLimit(map, currentPosition)
+    isBeyondLimit = isBeyondBottomLimit(map, currentPosition);
     if (!isBeyondLimit) {
-      const hitTree = getValue(map, currentPosition) === '#'
+      const hitTree = getValue(map, currentPosition) === '#';
       console.log('Current position', currentPosition, hitTree);
       if (hitTree) {
         result++;
       }
     }
-  } 
+  }
 
   return result;
 }
@@ -131,29 +131,30 @@ export async function part2() {
   const map: string[] = await readFile('./src/2020/day3/input.txt');
   const movements: Movement[] = [
     {
-    toRight: 1,
-    toBottom: 1,
-  },
+      toRight: 1,
+      toBottom: 1,
+    },
     {
-    toRight: 3,
-    toBottom: 1,
-  },
+      toRight: 3,
+      toBottom: 1,
+    },
     {
-    toRight: 5,
-    toBottom: 1,
-  },
+      toRight: 5,
+      toBottom: 1,
+    },
     {
-    toRight: 7,
-    toBottom: 1,
-  },
+      toRight: 7,
+      toBottom: 1,
+    },
     {
-    toRight: 1,
-    toBottom: 2,
-  }
-];
+      toRight: 1,
+      toBottom: 2,
+    },
+  ];
 
-  const reducer = (accumulator: number, movement: Movement) => accumulator * getFinalResult(map, movement);
-  const result = movements.reduce(reducer, 1)
+  const reducer = (accumulator: number, movement: Movement) =>
+    accumulator * getFinalResult(map, movement);
+  const result = movements.reduce(reducer, 1);
 
   console.log('The result is: ', result);
 }

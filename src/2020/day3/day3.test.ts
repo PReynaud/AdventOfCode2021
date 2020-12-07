@@ -16,7 +16,6 @@ describe('Day 3', () => {
     expect(getNextXAxisPosition(2, 5, 5)).toBe(2);
     expect(getNextXAxisPosition(4, 5, 5)).toBe(4);
     expect(getNextXAxisPosition(4, 1, 5)).toBe(0);
-
   });
 
   const testMap = [
@@ -48,18 +47,10 @@ describe('Day 3', () => {
   });
 
   it('should indicate if the bottom has been reached', () => {
-    expect(
-      isBeyondBottomLimit(testMap, { x: 0, y: 0 })
-    ).toBeFalsy();
-    expect(
-      isBeyondBottomLimit(testMap, { x: 0, y: 12 })
-    ).toBeTruthy();
-    expect(
-      isBeyondBottomLimit(testMap, { x: 5, y: 10 })
-    ).toBeFalsy();
-    expect(
-      isBeyondBottomLimit(testMap, { x: 5, y: 11 })
-    ).toBeTruthy();
+    expect(isBeyondBottomLimit(testMap, { x: 0, y: 0 })).toBeFalsy();
+    expect(isBeyondBottomLimit(testMap, { x: 0, y: 12 })).toBeTruthy();
+    expect(isBeyondBottomLimit(testMap, { x: 5, y: 10 })).toBeFalsy();
+    expect(isBeyondBottomLimit(testMap, { x: 5, y: 11 })).toBeTruthy();
   });
 
   it('should calculate the right result from a simple map', () => {
@@ -69,5 +60,5 @@ describe('Day 3', () => {
       toBottom: 1,
     };
     expect(getFinalResult(testMap, movement)).toEqual(7);
-  })
+  });
 });
