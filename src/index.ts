@@ -8,6 +8,7 @@ import * as day6 from './2020/day6';
 import * as day7 from './2020/day7';
 import * as day8 from './2020/day8';
 import * as day9 from './2020/day9';
+import * as day10 from './2020/day10';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -118,6 +119,18 @@ rl.question('Day ? ', async (dayNumber: string) => {
         rl.close();
       } else {
         await day9.part2();
+        rl.close();
+      }
+    });
+  }
+
+  if (dayNumber === '10') {
+    rl.question('Part ? ', async (part: string) => {
+      if (part === '1') {
+        await day10.part1();
+        rl.close();
+      } else {
+        await day10.part2();
         rl.close();
       }
     });
