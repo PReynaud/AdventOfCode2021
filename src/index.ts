@@ -1,14 +1,14 @@
 import readline from 'readline';
-import * as day1 from './2020/day1';
-import * as day2 from './2020/day2';
-import * as day3 from './2020/day3';
-import * as day4 from './2020/day4';
-import * as day5 from './2020/day5';
-import * as day6 from './2020/day6';
-import * as day7 from './2020/day7';
-import * as day8 from './2020/day8';
-import * as day9 from './2020/day9';
-import * as day10 from './2020/day10';
+import * as day1 from './2021/day1';
+import * as day2 from './2021/day1';
+import * as day3 from './2021/day1';
+import * as day4 from './2021/day1';
+import * as day5 from './2021/day1';
+import * as day6 from './2021/day1';
+import * as day7 from './2021/day1';
+import * as day8 from './2021/day1';
+import * as day9 from './2021/day1';
+import * as day10 from './2021/day1';
 
 const rl = readline.createInterface({
   input: process.stdin,
