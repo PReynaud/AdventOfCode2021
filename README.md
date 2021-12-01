@@ -1,4 +1,4 @@
-# My solutions for Advent of Code 2020
+# My solutions for Advent of Code 2021
 
 Realized in Typescript and with the constraint of not using lodash
 
