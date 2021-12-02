@@ -1,6 +1,6 @@
 import readline from 'readline';
 import * as day1 from './2021/day1';
-import * as day2 from './2021/day1';
+import * as day2 from './2021/day2';
 import * as day3 from './2021/day1';
 import * as day4 from './2021/day1';
 import * as day5 from './2021/day1';

@@ -12,7 +12,7 @@ export async function part1() {
 }
 
 export async function part2() {
-  console.log('coucou');
+  console.log('Start program day 1');
 
   const fromFile = await readFile('./src/2021/day1/input.txt');
   const depthList = fromFile.map((oneLine) => Number(oneLine));
