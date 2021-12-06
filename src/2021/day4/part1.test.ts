@@ -72,8 +72,6 @@ describe('Day 4 - Part 1', () => {
       { value: 2, marked: false },
       { value: 22, marked: false },
     ]);
-
-    console.log(result[2]);
   });
 
   it('should check if a board is winner or not', () => {
