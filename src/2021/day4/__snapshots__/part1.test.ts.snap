@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Day 4 - Part 1 should mark found values 1`] = `
+Array [
+  Array [
+    Object {
+      "marked": true,
+      "value": 22,
+    },
+    Object {
+      "marked": false,
+      "value": 13,
+    },
+    Object {
+      "marked": false,
+      "value": 17,
+    },
+    Object {
+      "marked": false,
+      "value": 11,
+    },
+    Object {
+      "marked": true,
+      "value": 0,
+    },
+  ],
+  Array [
+    Object {
+      "marked": false,
+      "value": 8,
+    },
+    Object {
+      "marked": false,
+      "value": 2,
+    },
+    Object {
+      "marked": false,
+      "value": 23,
+    },
+    Object {
+      "marked": false,
+      "value": 4,
+    },
+    Object {
+      "marked": false,
+      "value": 24,
+    },
+  ],
+  Array [
+    Object {
+      "marked": true,
+      "value": 21,
+    },
+    Object {
+      "marked": false,
+      "value": 9,
+    },
+    Object {
+      "marked": false,
+      "value": 14,
+    },
+    Object {
+      "marked": false,
+      "value": 16,
+    },
+    Object {
+      "marked": false,
+      "value": 7,
+    },
+  ],
+  Array [
+    Object {
+      "marked": false,
+      "value": 6,
+    },
+    Object {
+      "marked": false,
+      "value": 10,
+    },
+    Object {
+      "marked": false,
+      "value": 3,
+    },
+    Object {
+      "marked": true,
+      "value": 18,
+    },
+    Object {
+      "marked": false,
+      "value": 5,
+    },
+  ],
+  Array [
+    Object {
+      "marked": false,
+      "value": 1,
+    },
+    Object {
+      "marked": false,
+      "value": 12,
+    },
+    Object {
+      "marked": false,
+      "value": 20,
+    },
+    Object {
+      "marked": false,
+      "value": 15,
+    },
+    Object {
+      "marked": true,
+      "value": 19,
+    },
+  ],
+]
+`;
