@@ -1,4 +1,8 @@
-import { compareValueToNeighbours, extractValuesFromRaw, findListOfNeightbourValues } from "./part1";
+import {
+  compareValueToNeighbours,
+  extractValuesFromRaw,
+  findListOfNeightbourValues,
+} from './part1';
 
 interface Coordinates {
   x: number;
@@ -35,7 +39,10 @@ function findListOfNeightbourCoordinates(
     { x: x - 1, y },
     { x, y: y + 1 },
     { x: x + 1, y },
-  ].filter(value => value.x >= 0 && value.x <= xMax && value.y >= 0 && value.y <= yMax);
+  ].filter(
+    (value) =>
+      value.x >= 0 && value.x <= xMax && value.y >= 0 && value.y <= yMax
+  );
 }
 
 function getCaseFromCoordinates(grid: ComplexGrid, coord: Coordinates): Case {
@@ -53,17 +60,20 @@ export function findBasinSize(
   let result = 1;
   markLowPoint(grid, lowPoint);
 
-  const neighbours = findListOfNeightbourCoordinates(grid, lowPoint.x, lowPoint.y);
-  neighbours.forEach(neighbour => {
-    const neighbourCase = getCaseFromCoordinates(grid, neighbour); 
+  const neighbours = findListOfNeightbourCoordinates(
+    grid,
+    lowPoint.x,
+    lowPoint.y
+  );
+  neighbours.forEach((neighbour) => {
+    const neighbourCase = getCaseFromCoordinates(grid, neighbour);
     if (neighbourCase.value !== 9 && !neighbourCase.marked) {
       result += findBasinSize(grid, neighbour);
     }
-  })
+  });
 
   return result;
 }
-
 
 export function findLowPointsCoordinates(grid: number[][]): Coordinates[] {
   const result: Coordinates[] = [];
@@ -87,7 +97,12 @@ export function calculateRiskLevel(rawValues: string[]): number {
   const values = extractValuesFromRaw(rawValues);
   const lowPoints = findLowPointsCoordinates(values);
   const grid = transformGrid(values);
-  const basinSizeList = lowPoints.map(lowPoint => findBasinSize(grid, lowPoint));
+  const basinSizeList = lowPoints.map((lowPoint) =>
+    findBasinSize(grid, lowPoint)
+  );
 
-  return basinSizeList.sort((a, b) => a - b).slice(-3).reduce((acc, value) => acc * value, 1);
+  return basinSizeList
+    .sort((a, b) => a - b)
+    .slice(-3)
+    .reduce((acc, value) => acc * value, 1);
 }
