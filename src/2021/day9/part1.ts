@@ -35,7 +35,7 @@ export function findListOfNeightbourValues(
   return [grid[y - 1][x], grid[y][x - 1], grid[y + 1][x], grid[y][x + 1]];
 }
 
-function compareValueToNeighbours(
+export function compareValueToNeighbours(
   value: number,
   neightbours: number[]
 ): boolean {
