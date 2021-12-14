@@ -9,6 +9,7 @@ import * as day7 from './2021/day7';
 import * as day8 from './2021/day8';
 import * as day9 from './2021/day9';
 import * as day10 from './2021/day10';
+import * as day11 from './2021/day11';
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -26,6 +27,7 @@ const allDays = {
   '8': day8,
   '9': day9,
   '10': day10,
+  '11': day11,
 };
 
 rl.question('Day ? ', async (dayNumber: string) => {
